@@ -3,11 +3,11 @@ import pandas as pd
 import numpy as np
 
 # Load saved embeddings and predictions
-all_embeddings = torch.load('embeddings.pt')
-all_predictions = torch.load('predictions.pt')
+all_embeddings = torch.load('perch/perch_model/embeddings.pt')
+all_predictions = torch.load('perch/perch_model/predictions.pt')
 
 # Load metadata
-df = pd.read_csv('perch/train_metadata.csv')
+df = pd.read_csv('perch/perch_model/train_metadata.csv')
 
 # Prepare label mappings
 index_to_label = sorted(df.primary_label.unique())
